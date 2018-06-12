@@ -83,16 +83,11 @@ today = mm + '/' + dd + '/' + yyyy;
 document.write(today);*/
 
 
-var utc = $(".utc").text();						//get the utc time string from html
-var utcHrs = utc.charAt(0)+utc.charAt(1);		//assign first and second characters as utc hrs
-var utcMins = utc.charAt(3) + utc.charAt(4);	//assign minutes characters
-var localHrs, localMins, hrOffset, minOffset, sign, utcTime, localTime;
-var localAmPm = "am";
-getTimeZone(utcHrs,utcMins);
 
 
 
-function getTimeZone(hours, mins, utcAmPm) {
+
+function getTimeZone(hours, mins) {
 	var offset = new Date().getTimezoneOffset()			//Find local time offset from UTC
 	o = Math.abs(offset);								//Taking Absolute value of offset
 	utcTime = Number(hours)*60 + Number(mins);			//Converting it to minutes
@@ -105,10 +100,12 @@ function getTimeZone(hours, mins, utcAmPm) {
 
 	if(localTime<0){
 		localTime = 1440 + localTime;
+		prevDate = true;
 	}
 
 	else if(localTime>1440){
 		localTime = localTime - 1440;
+		nextDate = true;
 	}
 
 
@@ -130,7 +127,59 @@ function getTimeZone(hours, mins, utcAmPm) {
 		localAmPm = "pm";
 	}
 
-	console.log(localHrs + ":" + localMins + " " + localAmPm);
+	return(localHrs + ":" + localMins + " " + localAmPm);
+
+}
+
+for(let i=1; i<=40; i++){
+	var utc = $(".utc"+i).text();					//get the utc time string from html
+	var utcHrs = utc.charAt(0)+utc.charAt(1);		//assign first and second characters as utc hrs
+	var utcMins = utc.charAt(3) + utc.charAt(4);	//assign minutes characters
+	var localHrs, localMins, hrOffset, minOffset, sign, utcTime, localTime, newDate;
+	var localAmPm = "am";
+	var nextDate = false;
+	var prevDate = false;
+
+	var date = $(".date"+i).text();
+	var dateNumber = date.charAt(5)+date.charAt(6);
+	var day = $(".date"+i).next();
+
+	var time = getTimeZone(utcHrs,utcMins);
+	$(".utc"+i).text(time);
+
+	if(nextDate === true){	
+
+		newDate = Number(dateNumber) + 1;
+		$(".date" +i).text("June"+ " "+newDate);
+
+		switch(day.text()){
+			case "Sun": day.text("Mon"); break;
+			case "Mon": day.text("Tue"); break;
+			case "Tue": day.text("Wed"); break;
+			case "Wed": day.text("Thu"); break;
+			case "Thu": day.text("Fri"); break;
+			case "Fri": day.text("Sat"); break;
+			case "Sat": day.text("Sun"); break;
+		}
+	}
+
+	if(prevDate === true){	
+		
+		newDate = Number(dateNumber) - 1;
+		$(".date" +i).text("June"+ " "+newDate);
+
+		switch(day.text()){
+			case "Sun": day.text("Sat"); break;
+			case "Mon": day.text("Sun"); break;
+			case "Tue": day.text("Mon"); break;
+			case "Wed": day.text("Tue"); break;
+			case "Thu": day.text("Wed"); break;
+			case "Fri": day.text("Thu"); break;
+			case "Sat": day.text("Fri"); break;
+		}
+	}
+
+
 
 }
 
