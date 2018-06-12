@@ -37,12 +37,18 @@ $(".team").click(function(){
 	cards.not(playingCountryCard).hide();		//removing cards without the playing country
 	//schedule.not(playingCountry).hide();		//removing schedules without the playing country
 
+	$(".schedule-container").removeClass("overlay");
+	$(".team-list-card").removeClass("show");
+
 });
 
 $(".all-button").click(function(){
 	$(".schedule-wrapper").show();				//show all cards
 	//$(".match-container").show();				//show all schedules
 	$(".team").removeClass("selected");			//remove selected class from all teams
+
+	$(".schedule-container").removeClass("overlay");
+	$(".team-list-card").removeClass("show");
 })
 
 
