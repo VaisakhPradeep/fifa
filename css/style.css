@@ -254,5 +254,14 @@ body {
     width: 250px; }
   .schedule-container .schedule-scroll-container {
     overflow-x: hidden;
-    padding-top: 50px;
-    height: calc(100vh - 70px); } }
+    margin-top: 50px;
+    height: calc(100vh - 70px); }
+  .teams-button {
+    right: 20px; }
+  .team-list-card {
+    top: 2%;
+    padding: 5px;
+    border-right: 7px solid white; }
+    .team-list-card .all-button > button {
+      padding: 6px;
+      font-size: 0.8rem; } }
