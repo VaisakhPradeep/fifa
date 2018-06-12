@@ -26,7 +26,7 @@ body
 	left: 0px
 	width: 100%
 	height: 100%
-	background-color: #ccc
+	background-color: $yellow
 	z-index: -1
 
 	img
@@ -52,6 +52,10 @@ body
 	border-right: 1px solid white
 	opacity: 0.6
 
+
+
+/* -------------------- Schedules ------------------------  */
+
 .schedule-container
 	width: 100%
 	height: 100%
@@ -64,29 +68,40 @@ body
 		//padding-right: 17px
 		box-sizing: content-box
 
+.overlay::after
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0px
+	top: 0px
+	background: $black
+	z-index: 50
+	opacity: 0.6
+
 .schedule-wrapper
 	display: flex
 	align-items: center
 	padding-left: 20px
-	margin: 10px 0px
+	margin: 0px 0px
 	.schedule-date
 		text-align: right
 		margin-right: 30px
 		h2.date
-			font-size: 1.1rem
+			font-size: 1rem
 			color: $black
 			margin-bottom: 0px
 		h3.day
-			font-size: 1rem
+			font-size: 0.9rem
 			color: white
 			position: relative
 			left: 10px
-			margin-top: 5px
+			margin-top: 0px
 
 	.schedule-card-wrapper
 		.schedule-card
 			width: 430px
-			height: 140px
+			height: 48px
 			background-color: white
 			box-shadow: 1.482px 16.935px 37.24px 0.76px rgba(0, 0, 0, 0.24)
 			z-index: 10
@@ -105,7 +120,7 @@ body
 			right: -40px
 			background: url("../images/today.png") no-repeat
 			width: 40px
-			height: 140px
+			height: 48px
 
 		.four-matches
 			height: 160px
@@ -134,7 +149,7 @@ body
 					width: 20%
 					font-size: 0.9rem
 
-
+/* -------------------- Teams ------------------------  */
 
 .team-list-card
 	position: absolute
@@ -147,6 +162,7 @@ body
 	border-right: 0px
 	text-align: center
 	box-shadow: 1.482px 16.935px 37.24px 0.76px rgba(0, 0, 0, 0.24)
+	z-index: 200
 
 	.all-button
 		margin: 5px 0px 10px 0px
@@ -184,6 +200,43 @@ body
 				h3.team-name
 					text-decoration: underline
 					color: $black
+
+.teams-button
+	position: absolute
+	top: 20px
+	right: 50px
+	z-index: 20
+	display: none
+
+	button#team-button
+
+.close-btn
+	position: absolute
+	left: -80px
+	top: 0px
+	display: none
+	button#close
+
+
+
+
+/* -------------------- Media queries ------------------------  */
+
+@media(max-width: 1080px)
+	.team-list-card
+		display: none
+
+	.team-list-card.show
+		display: block
+
+	.background img
+		margin-left: 60%
+
+	.teams-button
+		display: inline-block
+
+	.close-btn
+		display: inline-block
 
 		
 
