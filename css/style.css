@@ -232,19 +232,26 @@ body {
   html {
     font-size: 14px; }
   .schedule-wrapper .schedule-card-wrapper .schedule-card {
-    width: 300px; }
+    width: 250px; }
     .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .country1 {
-      padding-right: 10px;
-      padding-left: 7%; }
+      padding-right: 18px;
+      padding-left: 3%; }
     .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .country2 {
       padding-left: 4%;
       padding-right: 20px; }
+    .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .country1 .flag > img, .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .country2 .flag > img {
+      width: 16px;
+      position: relative;
+      top: 1px; }
+    .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .time {
+      font-size: 0.8rem; }
   .schedule-wrapper {
     padding-left: 10px; }
     .schedule-wrapper .schedule-date {
       margin-right: 15px; }
   .background img {
-    margin-left: 20%; }
+    margin-left: 20%;
+    width: 250px; }
   .schedule-container .schedule-scroll-container {
     overflow-x: hidden;
     padding-top: 50px;
