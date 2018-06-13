@@ -133,7 +133,7 @@ function getTimeZone(hours, mins) {
 		localAmPm = "pm";
 	}
 
-	$("#temp").text(offset);
+	//$("#temp").text(offset);
 
 	return(localHrs + ":" + localMins + " " + localAmPm);
 
@@ -143,8 +143,7 @@ function getTimeZone(hours, mins) {
 
 
 var today = new Date();
-//var localDate = today.getDate();
-var localDate = 14;
+var localDate = today.getDate();
 
 for(let i=1; i<=40; i++){
 	var utc = $(".utc"+i).text();					//get the utc time string from html

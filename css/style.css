@@ -268,7 +268,7 @@ nav {
   .close-btn {
     display: inline-block; }
   nav {
-    right: 150px;
+    right: 200px;
     top: 12px; } }
 
 @media (max-width: 900px) {
@@ -293,7 +293,17 @@ nav {
   .schedule-container .schedule-scroll-container {
     height: 97vh; }
   .background img {
-    margin-left: 40%; } }
+    margin-left: 40%; }
+  nav {
+    right: 10px; }
+  .teams-button {
+    right: 30px; } }
+
+@media (max-width: 680px) {
+  .schedule-container .schedule-scroll-container {
+    overflow-x: hidden;
+    margin-top: 50px;
+    height: calc(100vh - 70px); } }
 
 @media (max-width: 600px) {
   html {
@@ -318,7 +328,7 @@ nav {
       margin-right: 15px; }
   nav {
     top: 5px;
-    right: 90px;
+    right: 150px;
     margin-top: 0px; }
   nav ul li {
     display: inline-block;
