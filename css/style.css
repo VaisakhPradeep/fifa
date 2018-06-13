@@ -6,7 +6,8 @@ html {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #fbd02a; }
 
 /* -------------------- Background ------------------------  */
 .background {
@@ -16,6 +17,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ccc;
+  background-color: #fbd02a;
   z-index: -1; }
   .background img {
     margin-left: 47%;
