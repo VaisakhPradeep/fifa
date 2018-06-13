@@ -16,6 +16,7 @@ html
 body
 	margin: 0
 	padding: 0
+	background-color: $orange
 
 
 /* -------------------- Background ------------------------  */
@@ -26,7 +27,7 @@ body
 	left: 0px
 	width: 100%
 	height: 100%
-	//background-color: #ccc
+	background-color: #ccc
 	background-color: $orange
 	z-index: -1
 
@@ -102,4 +103,24 @@ nav
 				position: relative
 				top: 5px
 
+/* -------------------- Content ------------------------  */
+
+@media(max-width: 900px)
+	.content
+		padding: 0 20%
+
+@media(max-width: 600px)
+	html
+		font-size: 14px
+	.content
+		padding: 0 15%
+	.social-networks	
+		img
+			width: 80%
+
+@media(max-width: 450px)
+	html
+		font-size: 12px
+	.content
+		padding: 0 10%
 
