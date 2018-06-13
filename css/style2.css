@@ -91,7 +91,8 @@ nav {
     padding: 0 1%; }
     .content .image-wrapper a {
       padding: 5px;
-      font-size: 0.8rem; } }
+      font-size: 0.8rem;
+      text-decoration: none; } }
 
 @media (max-width: 450px) {
   html {
