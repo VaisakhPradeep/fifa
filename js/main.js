@@ -133,9 +133,18 @@ function getTimeZone(hours, mins) {
 		localAmPm = "pm";
 	}
 
+	$("#temp").text(offset);
+
 	return(localHrs + ":" + localMins + " " + localAmPm);
 
 }
+
+
+
+
+var today = new Date();
+//var localDate = today.getDate();
+var localDate = 14;
 
 for(let i=1; i<=40; i++){
 	var utc = $(".utc"+i).text();					//get the utc time string from html
@@ -187,8 +196,18 @@ for(let i=1; i<=40; i++){
 
 
 
+	if(Number(dateNumber) === localDate){
+		$(".date"+i).parent().next().children().attr('id','today');
+	}
+	else{
+		$(".date"+i).parent().next().children().attr('id','');
+	}
+
+
 }
 
+
+//console.log($(".date1").parent().next().children());	
 
 
 
