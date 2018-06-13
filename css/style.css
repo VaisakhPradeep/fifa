@@ -6,8 +6,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  background-color: #fbd02a; }
+  padding: 0; }
 
 /* -------------------- Background ------------------------  */
 .background {
@@ -16,7 +15,7 @@ body {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: #fbd02a;
+  background-color: #ccc;
   z-index: -1; }
   .background img {
     margin-left: 47%;
@@ -54,6 +53,17 @@ nav {
       text-decoration: none;
       font-weight: 400;
       font-weight: 500; }
+
+.credits {
+  position: absolute;
+  bottom: 5px;
+  right: 25px;
+  opacity: 0.6; }
+  .credits h4 {
+    font-size: 0.8rem;
+    color: #242932; }
+    .credits h4 img {
+      width: 20px; }
 
 /* -------------------- Schedules ------------------------  */
 .schedule-container {
@@ -268,7 +278,9 @@ nav {
   nav {
     top: 50px;
     right: 30px;
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .credits {
+    display: none; } }
 
 @media (max-width: 749px) {
   .schedule-wrapper .schedule-card-wrapper .schedule-card {
