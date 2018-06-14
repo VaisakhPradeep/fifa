@@ -145,7 +145,7 @@ function getTimeZone(hours, mins) {
 var today = new Date();
 var localDate = today.getDate();
 
-for(let i=1; i<=40; i++){
+for(let i=1; i<=48; i++){
 	var utc = $(".utc"+i).text();					//get the utc time string from html
 	var utcHrs = utc.charAt(0)+utc.charAt(1);		//assign first and second characters as utc hrs
 	var utcMins = utc.charAt(3) + utc.charAt(4);	//assign minutes characters
