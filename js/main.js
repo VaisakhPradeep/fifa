@@ -205,6 +205,8 @@ for(let i=1; i<=48; i++){
 
 }
 
+var match1score = "5 - 0";
+$(".utc1").text(match1score);
 
 //console.log($(".date1").parent().next().children());	
 
