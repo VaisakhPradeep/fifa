@@ -218,6 +218,15 @@ $(".match1").click(function(){
 	window.open("https://youtu.be/SDY1N-IJOA8");
 });
 
+$(".match2").click(function(){
+	window.open("https://youtu.be/LPzZa-Btx6I");
+});
+
+$(".match3").click(function(){
+	window.open("https://youtu.be/rG6hK0eZ_Ys");
+});
+
+
 
 
 
