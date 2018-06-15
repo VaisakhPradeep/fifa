@@ -161,6 +161,8 @@ for(let i=1; i<=48; i++){
 	var time = getTimeZone(utcHrs,utcMins);
 	$(".utc"+i).text(time);
 
+	newDate = dateNumber;
+
 	if(nextDate === true){	
 
 		newDate = Number(dateNumber) + 1;
@@ -195,7 +197,7 @@ for(let i=1; i<=48; i++){
 
 
 
-	if(Number(dateNumber) === localDate){
+	if(Number(newDate) === localDate){
 		$(".date"+i).parent().next().children().attr('id','today');
 	}
 	else{
