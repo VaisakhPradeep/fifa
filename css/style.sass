@@ -111,6 +111,33 @@ nav
 	cursor: pointer
 	position: relative
 
+.score::after
+	content: 'Click to view highlights'
+	color: white
+	position: absolute
+	left: 0px
+	top: 0px
+	z-index: 50
+	width: 0%
+	height: 100%
+	background-color: $black
+	opacity: 0.8
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 0
+	font-size: 0
+
+.score::after
+	animation: slide 3s cubic-bezier(.36,.07,.19,.97) 2s 2 alternate
+
+@keyframes slide
+	0%
+		width: 0%
+	60%, 100%
+		width: 100%
+		font-size: 1rem
+
 .last-match	
 	margin-bottom: 30px !important
 
