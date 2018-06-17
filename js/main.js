@@ -216,7 +216,7 @@ $(".utc4").text("3 - 3");
 $(".utc5").text("2 - 1");
 $(".utc6").text("1 - 1");
 $(".utc7").text("0 - 1");
-$(".utc7").text("2 - 0");
+$(".utc8").text("2 - 0");
 
 //-------------------------------------------------------------highlights----------------------------------------------------//
 
@@ -242,6 +242,14 @@ $(".match5").click(function(){
 
 $(".match6").click(function(){
 	window.open("https://youtu.be/Xvarnwv6hRk");
+});
+
+$(".match7").click(function(){
+	window.open("https://youtu.be/O4odLCih0Os");
+});
+
+$(".match8").click(function(){
+	window.open("https://youtu.be/qS-V5h0wKr8");
 });
 
 
