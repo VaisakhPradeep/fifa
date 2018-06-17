@@ -1,25 +1,7 @@
 $(document).ready(function() {
 
 
-var el = $("#scroll-container");
-var testDiv = $("#today");
-var divHeight = el.height();
-var offset = testDiv.offset().top;
-var scrollValue;
 
-if(offset>divHeight/2){
-	scrollValue = offset - divHeight/2 + 100;
-	console.log(scrollValue);
-
-}
-
-
-function todayScroll(){
-	el.animate({
-		scrollTop: scrollValue
-	}, 400 );
-}
-todayScroll();
 
 
 $(".team").click(function(){
@@ -206,6 +188,30 @@ for(let i=1; i<=48; i++){
 
 
 }
+
+var el = $("#scroll-container");
+var testDiv = $("#today").first();
+console.log(testDiv);
+var divHeight = el.height();
+var offset = testDiv.offset().top;
+var scrollValue;
+
+if(offset>divHeight/2){
+	scrollValue = offset - divHeight/2 + 100;
+	console.log(scrollValue);
+
+}
+
+
+function todayScroll(){
+	el.animate({
+		scrollTop: scrollValue
+	}, 400 );
+}
+todayScroll();
+
+
+
 
 //-------------------------------------------------------------scores----------------------------------------------------//
 
