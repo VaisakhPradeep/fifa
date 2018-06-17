@@ -212,6 +212,17 @@ function todayScroll(){
 setTimeout(function(){ todayScroll(); }, 1000);
 
 
+/*
+
+$.ajax({
+    type: "GET",
+    headers: {"X-Auth-Token": " d562887c93b24f148cf75768e92d186d"},
+    url: "http://api.football-data.org/v1/competitions/467/fixtures"
+}).done(function (data) {
+    console.log(data);
+});*/
+
+
 
 
 
@@ -225,6 +236,8 @@ $(".utc5").text("2 - 1");
 $(".utc6").text("1 - 1");
 $(".utc7").text("0 - 1");
 $(".utc8").text("2 - 0");
+$(".utc9").text("0 - 1");
+
 
 //-------------------------------------------------------------highlights----------------------------------------------------//
 
