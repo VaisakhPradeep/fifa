@@ -206,9 +206,11 @@ if(offset>divHeight/2){
 function todayScroll(){
 	el.animate({
 		scrollTop: scrollValue
-	}, 400 );
+	}, 1000 );
 }
-todayScroll();
+
+setTimeout(function(){ todayScroll(); }, 1000);
+
 
 
 
