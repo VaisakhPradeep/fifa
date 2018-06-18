@@ -295,6 +295,41 @@ window.setInterval(function(){
 
 
 
+$(".match2").click(function(){
+	window.open("https://youtu.be/LPzZa-Btx6I");
+});
+
+$(".match3").click(function(){
+	window.open("https://youtu.be/rG6hK0eZ_Ys");
+});
+
+
+
+//UCpcTrCXblq78GZrTUTLWeBw
+
+var matchUrl = []
+
+$.ajax({
+    type: "GET",
+    url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLCGIzmTE4d0hww7NG9ytmooEUZov2k-23&key=AIzaSyDBfCLOFe7SgHUJ4xHvGit3b6EehoeeCRo"
+	}).done(function (d) {
+
+	for( let j=0; j<d.items.length; j++){
+		matchUrl[j] = "https://www.youtube.com/watch?v="+d.items[j].snippet.resourceId.videoId;
+		$(".match"+(j+1)).addClass("score");
+	}
+
+});
+
+$(".schedule-card-wrapper").click(function(){
+	index = $(".schedule-card-wrapper").index(this);
+	if(index<=matchUrl.length){
+		window.open(matchUrl[index]);
+	}
+	
+});
+
+
 //-------------------------------------------------------------scores (manual update)----------------------------------------------------//
 
 $(".utc1").text("5 - 0");
@@ -312,7 +347,7 @@ $(".utc11").text("1 - 1");
 
 //-------------------------------------------------------------highlights (manual update)----------------------------------------------------//
 
-$(".match1").click(function(){
+/*$(".match1").click(function(){
 	window.open("https://youtu.be/SDY1N-IJOA8");
 });
 
@@ -354,7 +389,8 @@ $(".match10").click(function(){
 
 $(".match11").click(function(){
 	window.open("https://youtu.be/3dWrKNrWbWQ");
-});
+});*/
+
 
 
 
