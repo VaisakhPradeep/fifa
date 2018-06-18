@@ -86,7 +86,7 @@ function getTimeZone(hours, mins) {
 		localTime = utcTime - o;
 	}
 
-	if(localTime<0){
+	if(localTime<0){									//End point cases
 		localTime = 1440 + localTime;
 		prevDate = true;
 	}
@@ -100,8 +100,10 @@ function getTimeZone(hours, mins) {
 
 	localHrs = Math.floor(localTime/60);				//Finding hours from minutes
 	localMins = ("00" + (localTime % 60)).slice(-2);	//Finding minutes from hours and converting to 2 digit format
+
+	//converting 24hr format to 12hr format
 	
-	if(localHrs === 0 || localHrs === 24){
+	if(localHrs === 0 || localHrs === 24){				
 		localHrs = 12;
 		localAmPm = "am";
 	}
@@ -114,8 +116,6 @@ function getTimeZone(hours, mins) {
 	else if(localHrs === 12){
 		localAmPm = "pm";
 	}
-
-	//$("#temp").text(offset);
 
 	return(localHrs + ":" + localMins + " " + localAmPm);
 
@@ -136,16 +136,16 @@ for(let i=1; i<=48; i++){
 	var nextDate = false;
 	var prevDate = false;
 
-	var date = $(".date"+i).text();
-	var dateNumber = date.charAt(5)+date.charAt(6);
-	var day = $(".date"+i).next();
+	var date = $(".date"+i).text();					//getting date from html
+	var dateNumber = date.charAt(5)+date.charAt(6);	//storing the two digit date value
+	var day = $(".date"+i).next();					//storing day string
 
-	var time = getTimeZone(utcHrs,utcMins);
+	var time = getTimeZone(utcHrs,utcMins);			//getting the correct time returned by the function
 	$(".utc"+i).text(time);
 
 	newDate = dateNumber;
 
-	if(nextDate === true){	
+	if(nextDate === true){							//Date and day shift according to the time conversion
 
 		newDate = Number(dateNumber) + 1;
 		$(".date" +i).text("June"+ " "+newDate);
@@ -177,7 +177,7 @@ for(let i=1; i<=48; i++){
 		}
 	}
 
-
+	//today banner placement
 
 	if(Number(newDate) === localDate){
 		$(".date"+i).parent().next().children().attr('id','today');
@@ -188,6 +188,9 @@ for(let i=1; i<=48; i++){
 
 
 }
+
+
+//scroll today's matches to center
 
 var el = $("#scroll-container");
 var testDiv = $("#today").first();
@@ -210,6 +213,9 @@ function todayScroll(){
 }
 
 setTimeout(function(){ todayScroll(); }, 1000);
+
+
+
 
 
 
@@ -254,16 +260,20 @@ $.ajax({
 	});
     
 	for(let i=0; i<data.length; i++){
-		if(data[i].status==="completed"){
+		if((data[i].status==="completed")||(data[i].status==="in progress")){
 			var homeGoals = data[i].home_team.goals;
 			var awayGoals = data[i].away_team.goals;
 			$(".utc"+(i+1)).text(homeGoals + " " + "-" + " " + awayGoals);
+		}
+
+		if(date[i].status==="completed"){
 			finishedMatches++;
 		}
 
+
 	}
 
-	$(".date"+finishedMatches).parent().parent().addClass("last-match");
+	$(".date"+finishedMatches).parent().parent().addClass("last-match"); 		//adding last-match class to provide margin-bottom to last match card
 
 });
 
@@ -271,7 +281,7 @@ $.ajax({
 
 
 
-//-------------------------------------------------------------scores----------------------------------------------------//
+//-------------------------------------------------------------scores (manual update)----------------------------------------------------//
 
 $(".utc1").text("5 - 0");
 $(".utc2").text("0 - 1");
@@ -286,7 +296,7 @@ $(".utc10").text("0 - 1");
 $(".utc11").text("1 - 1");
 
 
-//-------------------------------------------------------------highlights----------------------------------------------------//
+//-------------------------------------------------------------highlights (manual update)----------------------------------------------------//
 
 $(".match1").click(function(){
 	window.open("https://youtu.be/SDY1N-IJOA8");
@@ -331,6 +341,8 @@ $(".match10").click(function(){
 $(".match11").click(function(){
 	window.open("https://youtu.be/3dWrKNrWbWQ");
 });
+
+
 
 
 
