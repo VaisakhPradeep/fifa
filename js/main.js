@@ -217,7 +217,7 @@ var numberOfMatches = 48;
 var finishedMatches = 0;
 
 
-/*$.ajax({
+$.ajax({
     type: "GET",
     headers: {"X-Auth-Token": " d562887c93b24f148cf75768e92d186d"},
     url: "http://api.football-data.org/v1/competitions/467/fixtures"
@@ -240,7 +240,7 @@ var finishedMatches = 0;
 	$(".date"+finishedMatches).parent().parent().addClass("last-match");
 
 
-});*/
+});
 
 
 
@@ -248,7 +248,7 @@ var finishedMatches = 0;
 
 //-------------------------------------------------------------scores----------------------------------------------------//
 
-$(".utc1").text("5 - 0");
+/*$(".utc1").text("5 - 0");
 $(".utc2").text("0 - 1");
 $(".utc3").text("0 - 1");
 $(".utc4").text("3 - 3");
@@ -259,7 +259,7 @@ $(".utc8").text("2 - 0");
 $(".utc9").text("0 - 1");
 $(".utc10").text("0 - 1");
 $(".utc11").text("1 - 1");
-
+*/
 
 //-------------------------------------------------------------highlights----------------------------------------------------//
 
@@ -298,7 +298,14 @@ $(".match8").click(function(){
 $(".match9").click(function(){
 	window.open("https://youtu.be/bA6_7wFvG0E");
 });
+   
+$(".match10").click(function(){
+	window.open("https://youtu.be/6BSeFs40QOI");
+});
 
+$(".match11").click(function(){
+	window.open("https://youtu.be/3dWrKNrWbWQ");
+});
 
 
 
