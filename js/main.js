@@ -266,8 +266,12 @@ $.ajax({
 			$(".utc"+(i+1)).text(homeGoals + " " + "-" + " " + awayGoals);
 		}
 
-		if(date[i].status==="completed"){
+		if(data[i].status==="completed"){
 			finishedMatches++;
+		}
+
+		if(data[i].status==="in progress"){
+			console.log("in progress");
 		}
 
 
