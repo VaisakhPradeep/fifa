@@ -242,13 +242,38 @@ var finishedMatches = 0;
 
 });*/
 
+$.ajax({
+    type: "GET",
+    url: "https://world-cup-json.herokuapp.com/matches"
+}).done(function (data) {
+
+	data.sort(function(b,a){
+	  	// Turn your strings into dates, and then subtract them
+	  	// to get a value that is either negative, positive, or zero.
+	  	return new Date(b.datetime) - new Date(a.datetime);
+	});
+    
+	for(let i=0; i<data.length; i++){
+		if(data[i].status==="completed"){
+			var homeGoals = data[i].home_team.goals;
+			var awayGoals = data[i].away_team.goals;
+			$(".utc"+(i+1)).text(homeGoals + " " + "-" + " " + awayGoals);
+			finishedMatches++;
+		}
+
+	}
+
+	$(".date"+finishedMatches).parent().parent().addClass("last-match");
+
+});
+
 
 
 
 
 //-------------------------------------------------------------scores----------------------------------------------------//
 
-$(".utc1").text("5 - 0");
+/*$(".utc1").text("5 - 0");
 $(".utc2").text("0 - 1");
 $(".utc3").text("0 - 1");
 $(".utc4").text("3 - 3");
@@ -259,7 +284,7 @@ $(".utc8").text("2 - 0");
 $(".utc9").text("0 - 1");
 $(".utc10").text("0 - 1");
 $(".utc11").text("1 - 1");
-
+*/
 
 //-------------------------------------------------------------highlights----------------------------------------------------//
 
