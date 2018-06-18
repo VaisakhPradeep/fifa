@@ -248,10 +248,13 @@ var finishedMatches = 0;
 
 });*/
 
-$.ajax({
+var liveScore;
+
+function fetchData(){
+	$.ajax({
     type: "GET",
     url: "https://world-cup-json.herokuapp.com/matches"
-}).done(function (data) {
+	}).done(function (data) {
 
 	data.sort(function(b,a){
 	  	// Turn your strings into dates, and then subtract them
@@ -271,7 +274,7 @@ $.ajax({
 		}
 
 		if(data[i].status==="in progress"){
-			console.log("in progress");
+			//console.log("match in progress");
 		}
 
 
@@ -279,9 +282,16 @@ $.ajax({
 
 	$(".date"+finishedMatches).parent().parent().addClass("last-match"); 		//adding last-match class to provide margin-bottom to last match card
 
-});
+	});
 
+	//console.log(liveScore);
+}
 
+fetchData();
+
+window.setInterval(function(){
+  fetchData();
+}, 30000);
 
 
 
