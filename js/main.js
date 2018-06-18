@@ -217,10 +217,10 @@ var numberOfMatches = 48;
 var finishedMatches = 0;
 
 
-$.ajax({
+/*$.ajax({
     type: "GET",
     headers: {"X-Auth-Token": " d562887c93b24f148cf75768e92d186d"},
-    url: "https://crossorigin.me/http://api.football-data.org/v1/competitions/467/fixtures"
+    url: "http://api.football-data.org/v1/competitions/467/fixtures"
 }).done(function (data) {
     
 	for(let j=0; j<numberOfMatches; j++){
@@ -240,7 +240,7 @@ $.ajax({
 	$(".date"+finishedMatches).parent().parent().addClass("last-match");
 
 
-});
+});*/
 
 
 
