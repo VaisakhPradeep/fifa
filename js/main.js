@@ -291,6 +291,8 @@ function fetchData(){
 
 fetchData();
 
+//fetch data every 30 seconds
+
 window.setInterval(function(){
   fetchData();
 }, 30000);
@@ -323,16 +325,18 @@ $.ajax({
 
 });
 
-$(".schedule-card-wrapper").click(function(){
+//open highlights URL when the card is clicked
+
+/*$(".schedule-card-wrapper").click(function(){
 	index = $(".schedule-card-wrapper").index(this);
 	if(index<=matchUrl.length){
 		window.open(matchUrl[index]);
 	}
 	
 });
+*/
 
-
-//-------------------------------------------------------------scores (manual update)----------------------------------------------------//
+//-------------------------------------------------------------scores (fallback: manual update)----------------------------------------------------//
 
 $(".utc1").text("5 - 0");
 $(".utc2").text("0 - 1");
@@ -347,9 +351,9 @@ $(".utc10").text("0 - 1");
 $(".utc11").text("1 - 1");
 
 
-//-------------------------------------------------------------highlights (manual update)----------------------------------------------------//
+//-------------------------------------------------------------highlights (fallback: manual update)----------------------------------------------------//
 
-/*$(".match1").click(function(){
+$(".match1").click(function(){
 	window.open("https://youtu.be/SDY1N-IJOA8");
 });
 
@@ -386,12 +390,20 @@ $(".match9").click(function(){
 });
    
 $(".match10").click(function(){
-	window.open("https://youtu.be/6BSeFs40QOI");
+	window.open("https://youtu.be/3dWrKNrWbWQ");
 });
 
 $(".match11").click(function(){
-	window.open("https://youtu.be/3dWrKNrWbWQ");
-});*/
+	window.open("https://youtu.be/5ZlE-hUl5UU");
+});
+
+$(".match12").click(function(){
+	window.open("https://youtu.be/XCr1xpwEuZQ");
+});
+
+$(".match13").click(function(){
+	window.open("https://youtu.be/u3wfrhjoIJg");
+});
 
 
 
