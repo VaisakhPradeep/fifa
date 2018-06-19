@@ -390,18 +390,22 @@ $(".match9").click(function(){
 });
    
 $(".match10").click(function(){
-	window.open("https://youtu.be/3dWrKNrWbWQ");
+	window.open("https://youtu.be/6BSeFs40QOI");
 });
 
 $(".match11").click(function(){
-	window.open("https://youtu.be/5ZlE-hUl5UU");
+	window.open("https://youtu.be/3dWrKNrWbWQ");
 });
 
 $(".match12").click(function(){
-	window.open("https://youtu.be/XCr1xpwEuZQ");
+	window.open("https://youtu.be/5ZlE-hUl5UU");
 });
 
 $(".match13").click(function(){
+	window.open("https://youtu.be/XCr1xpwEuZQ");
+});
+
+$(".match14").click(function(){
 	window.open("https://youtu.be/u3wfrhjoIJg");
 });
 
