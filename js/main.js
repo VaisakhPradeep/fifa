@@ -311,7 +311,11 @@ $(".match3").click(function(){
 
 //UCpcTrCXblq78GZrTUTLWeBw
 
-var matchUrl = []
+var matchUrl = [];
+var matchTitle = [];
+var indexOfMatch = [];
+var indexOfMatchNumber = [];
+var matchNumber = [];
 
 $.ajax({
     type: "GET",
@@ -319,11 +323,30 @@ $.ajax({
 	}).done(function (d) {
 
 	for( let j=0; j<d.items.length; j++){
-		matchUrl[j] = "https://www.youtube.com/watch?v="+d.items[j].snippet.resourceId.videoId;
+		
 		$(".match"+(j+1)).addClass("score");
+		matchTitle[j] = d.items[j].snippet.title;
+		console.log(matchTitle[j]);
+		indexOfMatch[j] = matchTitle[j].indexOf("Match");
+		if(indexOfMatch[j] === -1){
+			indexOfMatch[j] = matchTitle[j].indexOf("MATCH");
+		}
+
+		matchNumber[j] = matchTitle[j].substr(matchTitle[j].length - 2);
+		matchNumber[j] = $.trim(matchTitle[j].substr(matchTitle[j].length - 2));
+		//console.log(matchNumber[j]);
+		/*if(matchTitle[matchTitle.length - 2])
+		matchNumber[j] = matchTitle[j].substr()*/
+		matchUrl[j] = "https://www.youtube.com/watch?v="+d.items[matchNumber[j]-1].snippet.resourceId.videoId;
+		//console.log(matchUrl[j]);
+
+
+
 	}
 
 });
+
+
 
 //open highlights URL when the card is clicked
 
@@ -407,6 +430,10 @@ $(".match13").click(function(){
 
 $(".match14").click(function(){
 	window.open("https://youtu.be/u3wfrhjoIJg");
+});
+
+$(".match15").click(function(){
+	window.open("https://youtu.be/y4SeAfCg7-o");
 });
 
 
