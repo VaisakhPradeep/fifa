@@ -261,6 +261,8 @@ function fetchData(){
 	  	// to get a value that is either negative, positive, or zero.
 	  	return new Date(b.datetime) - new Date(a.datetime);
 	});
+
+	var finishedMatches = 0;
     
 	for(let i=0; i<data.length; i++){
 		if((data[i].status==="completed")||(data[i].status==="in progress")){
