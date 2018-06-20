@@ -322,17 +322,26 @@ $.ajax({
     url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLCGIzmTE4d0hww7NG9ytmooEUZov2k-23&key=AIzaSyDBfCLOFe7SgHUJ4xHvGit3b6EehoeeCRo"
 	}).done(function (d) {
 
+
+	function compare(a,b) {
+	  if (a.snippet.publishedAt < b.snippet.publishedAt)
+	    return -1;
+	  if (a.snippet.publishedAt > b.snippet.publishedAt)
+	    return 1;
+	  return 0;
+	}
+
+	d.items.sort(compare);
+
+
 	for( let j=0; j<d.items.length; j++){
 		
 		$(".match"+(j+1)).addClass("score");
-		
-		
-		
-		
-
-
+		matchUrl[j] = "https://www.youtube.com/watch?v=" + d.items[j].snippet.resourceId.videoId;
 
 	}
+
+
 
 });
 
@@ -340,14 +349,14 @@ $.ajax({
 
 //open highlights URL when the card is clicked
 
-/*$(".schedule-card-wrapper").click(function(){
+$(".schedule-card-wrapper").click(function(){
 	index = $(".schedule-card-wrapper").index(this);
 	if(index<=matchUrl.length){
 		window.open(matchUrl[index]);
 	}
 	
 });
-*/
+
 
 //-------------------------------------------------------------scores (fallback: manual update)----------------------------------------------------//
 
