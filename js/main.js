@@ -325,20 +325,10 @@ $.ajax({
 	for( let j=0; j<d.items.length; j++){
 		
 		$(".match"+(j+1)).addClass("score");
-		matchTitle[j] = d.items[j].snippet.title;
-		console.log(matchTitle[j]);
-		indexOfMatch[j] = matchTitle[j].indexOf("Match");
-		if(indexOfMatch[j] === -1){
-			indexOfMatch[j] = matchTitle[j].indexOf("MATCH");
-		}
-
-		matchNumber[j] = matchTitle[j].substr(matchTitle[j].length - 2);
-		matchNumber[j] = $.trim(matchTitle[j].substr(matchTitle[j].length - 2));
-		//console.log(matchNumber[j]);
-		/*if(matchTitle[matchTitle.length - 2])
-		matchNumber[j] = matchTitle[j].substr()*/
-		matchUrl[j] = "https://www.youtube.com/watch?v="+d.items[matchNumber[j]-1].snippet.resourceId.videoId;
-		//console.log(matchUrl[j]);
+		
+		
+		
+		
 
 
 
@@ -436,6 +426,13 @@ $(".match15").click(function(){
 	window.open("https://youtu.be/y4SeAfCg7-o");
 });
 
+$(".match16").click(function(){
+	window.open("https://youtu.be/SXkg_12ukOk");
+});
+
+$(".match17").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
 
 
 
