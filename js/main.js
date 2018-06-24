@@ -71,7 +71,7 @@ today = mm + '/' + dd + '/' + yyyy;
 document.write(today);*/
 
 
-
+console.log("testing");
 
 
 
