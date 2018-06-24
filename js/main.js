@@ -307,6 +307,10 @@ $(".match3").click(function(){
 	window.open("https://youtu.be/rG6hK0eZ_Ys");
 });
 
+$(".match30").click(function(){
+	window.open("https://www.youtube.com/watch?v=kPAIcIBtCtE");
+})
+
 
 
 //UCpcTrCXblq78GZrTUTLWeBw
@@ -336,7 +340,7 @@ $.ajax({
 	console.log(d);
 
 
-	for( let j=0; j<=d.items.length; j++){
+	for( let j=0; j<d.items.length; j++){
 		
 		$(".match"+(j+1)).addClass("score");
 		matchUrl[j] = "https://www.youtube.com/watch?v=" + d.items[j].snippet.resourceId.videoId;
@@ -355,11 +359,11 @@ $(".schedule-card-wrapper").click(function(){
 	index = $(".schedule-card-wrapper").index(this);
 	if(index<=matchUrl.length){
 
-		if(index<16){
+		if(index<16 || index>29){
 			window.open(matchUrl[index]);
 		}
 
-		else if(index>16){
+		else if(index> 16 && index<29){
 			window.open(matchUrl[index-1]);
 		}
 
