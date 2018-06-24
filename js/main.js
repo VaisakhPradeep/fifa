@@ -333,8 +333,10 @@ $.ajax({
 
 	d.items.sort(compare);
 
+	console.log(d);
 
-	for( let j=0; j<d.items.length; j++){
+
+	for( let j=0; j<=d.items.length; j++){
 		
 		$(".match"+(j+1)).addClass("score");
 		matchUrl[j] = "https://www.youtube.com/watch?v=" + d.items[j].snippet.resourceId.videoId;
@@ -352,10 +354,24 @@ $.ajax({
 $(".schedule-card-wrapper").click(function(){
 	index = $(".schedule-card-wrapper").index(this);
 	if(index<=matchUrl.length){
-		window.open(matchUrl[index]);
+
+		if(index<16){
+			window.open(matchUrl[index]);
+		}
+
+		else if(index>16){
+			window.open(matchUrl[index-1]);
+		}
+
+		
 	}
+
+
+
+
 	
 });
+
 
 
 //-------------------------------------------------------------scores (fallback: manual update)----------------------------------------------------//
