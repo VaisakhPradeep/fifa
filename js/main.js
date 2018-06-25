@@ -294,9 +294,9 @@ fetchData();
 
 //fetch data every 30 seconds
 
-window.setInterval(function(){
+/*window.setInterval(function(){
   fetchData();
-}, 30000);
+}, 30000);*/
 
 
 
@@ -315,6 +315,10 @@ $(".match30").click(function(){
 $(".match32").click(function(){
 	window.open("https://www.youtube.com/watch?v=wa974tOozEI");
 })
+
+$(".match33").click(function(){
+	window.open("https://www.youtube.com/watch?v=lEzuFPeSBcA");
+});
 
 
 //UCpcTrCXblq78GZrTUTLWeBw
@@ -383,6 +387,90 @@ $(".schedule-card-wrapper").click(function(){
 	
 });
 
+//-------------------------------------------------------------scores (semi-automated update)----------------------------------------------------//
+
+var fifaId = [
+	"300331516",
+	"300331500",
+	"300340184",
+	"300331506",
+	"300331512",
+	"300331519",
+	"300331510",
+	"300331548",
+	"300331532",
+	"300331534",
+	"300331521",
+	"300331553",
+	"300331507",
+	"300340182",
+	"300331520"
+];
+
+var resultObj = [];
+
+
+
+function fetchData2(){
+	$.ajax({
+    type: "GET",
+    url: "https://world-cup-json.herokuapp.com/matches"
+	}).done(function (data) {
+
+	data.sort(function(b,a){
+	  	// Turn your strings into dates, and then subtract them
+	  	// to get a value that is either negative, positive, or zero.
+	  	return new Date(b.datetime) - new Date(a.datetime);
+	});
+
+	var lastNumber = 33;
+
+	for(let i=0; i<fifaId.length; i++){
+		resultObj[i] = data.filter(function( d ) {
+	  	return d.fifa_id == fifaId[i];
+
+		});
+
+		if((resultObj[i][0].status==="completed")||(resultObj[i][0].status==="in progress")){
+			$(".utc"+(i+34)).text(resultObj[i][0].home_team.goals+" "+"-"+" "+resultObj[i][0].away_team.goals);
+		}
+
+		if(resultObj[i][0].status==="completed"){
+			lastNumber++;
+		}
+
+	}
+	$(".date"+lastNumber).parent().parent().addClass("last-match");
+	
+
+
+
+});
+
+
+
+    
+}
+
+fetchData2();
+
+//fetch data every 30 seconds
+
+window.setInterval(function(){
+  fetchData2();
+}, 30000);
+
+
+
+
+
+console.log($("#today"));
+
+
+
+
+
+
 
 
 //-------------------------------------------------------------scores (fallback: manual update)----------------------------------------------------//
@@ -401,8 +489,9 @@ $(".utc11").text("1 - 1");
 
 
 $(".utc33").text("2 - 1");
-$(".utc34").text("3 - 0");
 /*
+$(".utc34").text("3 - 0");
+
 $(".utc35").text("");
 $(".utc36").text("");
 $(".utc37").text("");
@@ -495,68 +584,86 @@ $(".match17").click(function(){
 
 
 
+
+
+$(".match33").addClass("score");
+$(".match33").click(function(){
+	window.open("https://www.youtube.com/watch?v=lEzuFPeSBcA");
+});
+
+$(".match34").addClass("score");
+$(".match34").click(function(){
+	window.open("https://www.youtube.com/watch?v=I_YrTEiOVGo");
+});
+
 /*
 
-$(".match33").click(function(){
-	window.open("");
-});
-
-$(".match34").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
-});
-
+$(".match35").addClass("score");
 $(".match35").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match36").addClass("score");
 $(".match36").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match37").addClass("score");
 $(".match37").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match38").addClass("score");
 $(".match38").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match39").addClass("score");
 $(".match39").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match40").addClass("score");
 $(".match40").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match41").addClass("score");
 $(".match41").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match42").addClass("score");
 $(".match42").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match43").addClass("score");
 $(".match43").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match44").addClass("score");
 $(".match44").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match45").addClass("score");
 $(".match45").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match46").addClass("score");
 $(".match46").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match47").addClass("score");
 $(".match47").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
+$(".match48").addClass("score");
 $(".match48").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
