@@ -311,6 +311,9 @@ $(".match30").click(function(){
 	window.open("https://www.youtube.com/watch?v=kPAIcIBtCtE");
 })
 
+$(".match32").click(function(){
+	window.open("https://www.youtube.com/watch?v=wa974tOozEI");
+})
 
 
 //UCpcTrCXblq78GZrTUTLWeBw
@@ -340,7 +343,7 @@ $.ajax({
 	console.log(d);
 
 
-	for( let j=0; j<d.items.length; j++){
+	for( let j=0; j<=d.items.length; j++){
 		
 		$(".match"+(j+1)).addClass("score");
 		matchUrl[j] = "https://www.youtube.com/watch?v=" + d.items[j].snippet.resourceId.videoId;
@@ -366,6 +369,11 @@ $(".schedule-card-wrapper").click(function(){
 		else if(index> 16 && index<29){
 			window.open(matchUrl[index-1]);
 		}
+
+		if(index> 31){
+			window.open(matchUrl[index-1]);
+		}
+
 
 		
 	}
