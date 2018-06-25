@@ -283,7 +283,7 @@ function fetchData(){
 
 	}
 
-	$(".date"+finishedMatches).parent().parent().addClass("last-match"); 		//adding last-match class to provide margin-bottom to last match card
+	/*$(".date"+finishedMatches).parent().parent().addClass("last-match");*/ 		//adding last-match class to provide margin-bottom to last match card
 
 	});
 
@@ -399,9 +399,10 @@ $(".utc9").text("0 - 1");
 $(".utc10").text("0 - 1");
 $(".utc11").text("1 - 1");
 
+
+$(".utc33").text("2 - 1");
+$(".utc34").text("3 - 0");
 /*
-$(".utc33").text("");
-$(".utc34").text("");
 $(".utc35").text("");
 $(".utc36").text("");
 $(".utc37").text("");
