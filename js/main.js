@@ -263,8 +263,9 @@ function fetchData(){
 	});
 
 	var finishedMatches = 0;
+
     
-	for(let i=0; i<data.length; i++){
+	for(let i=0; i<32; i++){
 		if((data[i].status==="completed")||(data[i].status==="in progress")){
 			var homeGoals = data[i].home_team.goals;
 			var awayGoals = data[i].away_team.goals;
@@ -340,10 +341,10 @@ $.ajax({
 
 	d.items.sort(compare);
 
-	console.log(d);
+	//console.log(d.items.length);
 
 
-	for( let j=0; j<=d.items.length; j++){
+	for( let j=0; j<=31; j++){
 		
 		$(".match"+(j+1)).addClass("score");
 		matchUrl[j] = "https://www.youtube.com/watch?v=" + d.items[j].snippet.resourceId.videoId;
@@ -370,9 +371,7 @@ $(".schedule-card-wrapper").click(function(){
 			window.open(matchUrl[index-1]);
 		}
 
-		if(index> 31){
-			window.open(matchUrl[index-1]);
-		}
+		
 
 
 		
@@ -399,6 +398,28 @@ $(".utc8").text("2 - 0");
 $(".utc9").text("0 - 1");
 $(".utc10").text("0 - 1");
 $(".utc11").text("1 - 1");
+
+
+$(".utc33").text("");
+$(".utc34").text("");
+$(".utc35").text("");
+$(".utc36").text("");
+$(".utc37").text("");
+$(".utc38").text("");
+$(".utc39").text("");
+$(".utc40").text("");
+$(".utc41").text("");
+$(".utc42").text("");
+$(".utc43").text("");
+$(".utc44").text("");
+$(".utc45").text("");
+$(".utc46").text("");
+$(".utc47").text("");
+$(".utc48").text("");
+
+
+
+
 
 
 //-------------------------------------------------------------highlights (fallback: manual update)----------------------------------------------------//
@@ -470,6 +491,76 @@ $(".match16").click(function(){
 $(".match17").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
 });
+
+
+
+/*
+
+$(".match33").click(function(){
+	window.open("");
+});
+
+$(".match34").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match35").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match36").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match37").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match38").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match39").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match40").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match41").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match42").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match43").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match44").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match45").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match46").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match47").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+$(".match48").click(function(){
+	window.open("https://youtu.be/AygUlfmQgBs");
+});
+
+*/
 
 
 
