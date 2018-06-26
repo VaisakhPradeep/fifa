@@ -608,19 +608,18 @@ $(".match36").click(function(){
 	window.open("https://youtu.be/cIOqidBVnO4");
 });
 
+/*
 
 $(".match37").addClass("score");
 $(".match37").click(function(){
-	window.open("https://www.youtube.com/watch?v=fR-txBJG-B4");
+	window.open("https://youtu.be/AygUlfmQgBs");
 });
-
 
 $(".match38").addClass("score");
 $(".match38").click(function(){
-	window.open("https://www.youtube.com/watch?v=UvFP1ITZ7To");
+	window.open("https://youtu.be/AygUlfmQgBs");
 });
 
-/*
 $(".match39").addClass("score");
 $(".match39").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
