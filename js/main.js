@@ -614,12 +614,13 @@ $(".match37").click(function(){
 	window.open("https://www.youtube.com/watch?v=fR-txBJG-B4");
 });
 
-/*
+
 $(".match38").addClass("score");
 $(".match38").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://www.youtube.com/watch?v=UvFP1ITZ7To");
 });
 
+/*
 $(".match39").addClass("score");
 $(".match39").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
