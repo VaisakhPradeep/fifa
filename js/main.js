@@ -596,17 +596,19 @@ $(".match34").click(function(){
 	window.open("https://www.youtube.com/watch?v=I_YrTEiOVGo");
 });
 
-/*
+
 
 $(".match35").addClass("score");
 $(".match35").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/JlPIrEKFCeo");
 });
 
 $(".match36").addClass("score");
 $(".match36").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/cIOqidBVnO4");
 });
+
+/*
 
 $(".match37").addClass("score");
 $(".match37").click(function(){
