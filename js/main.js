@@ -596,8 +596,6 @@ $(".match34").click(function(){
 	window.open("https://www.youtube.com/watch?v=I_YrTEiOVGo");
 });
 
-
-
 $(".match35").addClass("score");
 $(".match35").click(function(){
 	window.open("https://youtu.be/JlPIrEKFCeo");
@@ -607,7 +605,6 @@ $(".match36").addClass("score");
 $(".match36").click(function(){
 	window.open("https://youtu.be/cIOqidBVnO4");
 });
-
 
 $(".match37").addClass("score");
 $(".match37").click(function(){
@@ -619,17 +616,18 @@ $(".match38").click(function(){
 	window.open("https://www.youtube.com/watch?v=UvFP1ITZ7To");
 });
 
-/*
+
 $(".match39").addClass("score");
 $(".match39").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/RmlkAOwJ1gI");
 });
 
 $(".match40").addClass("score");
 $(".match40").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/wfy1ojdPyzA");
 });
 
+/*
 $(".match41").addClass("score");
 $(".match41").click(function(){
 	window.open("https://youtu.be/AygUlfmQgBs");
