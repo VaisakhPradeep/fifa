@@ -627,16 +627,18 @@ $(".match40").click(function(){
 	window.open("https://youtu.be/wfy1ojdPyzA");
 });
 
-/*
+
 $(".match41").addClass("score");
 $(".match41").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://www.youtube.com/watch?v=BHT6V1SpmNA");
 });
 
 $(".match42").addClass("score");
 $(".match42").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://www.youtube.com/watch?v=OKjV2SQfKrw");
 });
+
+/*
 
 $(".match43").addClass("score");
 $(".match43").click(function(){
