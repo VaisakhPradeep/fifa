@@ -648,17 +648,17 @@ $(".match44").click(function(){
 	window.open("https://youtu.be/_dusyi-4pMs");
 });
 
-/*
-
 $(".match45").addClass("score");
 $(".match45").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://www.youtube.com/watch?v=2CRmHuN-O84");
 });
 
 $(".match46").addClass("score");
 $(".match46").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://www.youtube.com/watch?v=K7pVlD8Q660");
 });
+
+/*
 
 $(".match47").addClass("score");
 $(".match47").click(function(){
