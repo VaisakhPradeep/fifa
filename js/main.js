@@ -127,7 +127,7 @@ function getTimeZone(hours, mins) {
 var today = new Date();
 var localDate = today.getDate();
 
-for(let i=1; i<=48; i++){
+for(let i=1; i<=56; i++){
 	var utc = $(".utc"+i).text();					//get the utc time string from html
 	var utcHrs = utc.charAt(0)+utc.charAt(1);		//assign first and second characters as utc hrs
 	var utcMins = utc.charAt(3) + utc.charAt(4);	//assign minutes characters
@@ -175,6 +175,14 @@ for(let i=1; i<=48; i++){
 			case "Fri": day.text("Thu"); break;
 			case "Sat": day.text("Fri"); break;
 		}
+	}
+ 
+	if(dateNumber === "30" && nextDate === true){
+		$(".date" +i).text(" "+"July"+ " "+"01");
+	}
+
+	if(dateNumber === "01" && prevDate === true){
+		$(".date" +i).text("June"+ " "+"30");
 	}
 
 	//today banner placement
