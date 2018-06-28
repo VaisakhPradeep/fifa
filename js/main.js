@@ -638,17 +638,17 @@ $(".match42").click(function(){
 	window.open("https://www.youtube.com/watch?v=OKjV2SQfKrw");
 });
 
-/*
-
 $(".match43").addClass("score");
 $(".match43").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/izvscMabH8o");
 });
 
 $(".match44").addClass("score");
 $(".match44").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/_dusyi-4pMs");
 });
+
+/*
 
 $(".match45").addClass("score");
 $(".match45").click(function(){
