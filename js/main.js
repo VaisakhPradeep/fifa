@@ -674,19 +674,19 @@ $(".match46").click(function(){
 	window.open("https://www.youtube.com/watch?v=K7pVlD8Q660");
 });
 
-/*
+
 
 $(".match47").addClass("score");
 $(".match47").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/N5F1hqWW_5w");
 });
 
 $(".match48").addClass("score");
 $(".match48").click(function(){
-	window.open("https://youtu.be/AygUlfmQgBs");
+	window.open("https://youtu.be/nc9zirKrT0Q");
 });
 
-*/
+
 
 
 
