@@ -71,12 +71,11 @@ today = mm + '/' + dd + '/' + yyyy;
 document.write(today);*/
 
 
-console.log("testing");
-
 
 
 function getTimeZone(hours, mins) {
 	var offset = new Date().getTimezoneOffset()			//Find local time offset from UTC
+	//var offset = 1000
 	o = Math.abs(offset);								//Taking Absolute value of offset
 	utcTime = Number(hours)*60 + Number(mins);			//Converting it to minutes
 	if(offset<0){										//Adding or subtracting offset to get local time
@@ -139,6 +138,7 @@ for(let i=1; i<=56; i++){
 	var date = $(".date"+i).text();					//getting date from html
 	var dateNumber = date.charAt(5)+date.charAt(6);	//storing the two digit date value
 	var day = $(".date"+i).next();					//storing day string
+	var month = date.substr(0,4);
 
 	var time = getTimeZone(utcHrs,utcMins);			//getting the correct time returned by the function
 	$(".utc"+i).text(time);
@@ -146,9 +146,16 @@ for(let i=1; i<=56; i++){
 	newDate = dateNumber;
 
 	if(nextDate === true){							//Date and day shift according to the time conversion
-
 		newDate = Number(dateNumber) + 1;
-		$(".date" +i).text("June"+ " "+newDate);
+		newDate = ("00"+newDate).slice(-2);
+		if(month==="June"){			
+			$(".date" +i).text("June"+ " "+newDate);
+		}
+		
+		if(month==="July"){
+			$(".date" +i).text("July"+ " "+newDate);
+		}
+		
 
 		switch(day.text()){
 			case "Sun": day.text("Mon"); break;
@@ -164,7 +171,14 @@ for(let i=1; i<=56; i++){
 	if(prevDate === true){	
 		
 		newDate = Number(dateNumber) - 1;
-		$(".date" +i).text("June"+ " "+newDate);
+		newDate = ("00"+newDate).slice(-2);
+		if(month==="June"){			
+			$(".date" +i).text("June"+ " "+newDate);
+		}
+		
+		if(month==="July"){
+			$(".date" +i).text("July"+ " "+newDate);
+		}
 
 		switch(day.text()){
 			case "Sun": day.text("Sat"); break;
@@ -197,12 +211,19 @@ for(let i=1; i<=56; i++){
 
 }
 
+for(let i=1; i<=56; i++){
+	var date = $(".date"+i).text();
+	var month = date.substr(0,4)
+	if(month==="July"){
+		$(".date"+i).parent().next().children().css('margin-left', '5px');
+	}
+}
+
 
 //scroll today's matches to center
 
 var el = $("#scroll-container");
 var testDiv = $("#today").first();
-console.log(testDiv);
 var divHeight = el.height();
 if(testDiv.length!==0){
 	var offset = testDiv.offset().top;
@@ -212,12 +233,10 @@ else{
 	var offset = $(".schedule-wrapper").filter(":last").offset().top;
 }
 
-console.log();
 var scrollValue;
 
 if(offset>divHeight/2){
 	scrollValue = offset - divHeight/2 + 100;
-	console.log(scrollValue);
 }
 
 
@@ -474,14 +493,6 @@ fetchData2();
 window.setInterval(function(){
   fetchData2();
 }, 30000);
-
-
-
-
-
-console.log($("#today"));
-
-
 
 
 
