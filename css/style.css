@@ -267,7 +267,7 @@ nav {
       right: 0px;
       bottom: 2px;
       font-size: 0.65rem;
-      right: 5px;
+      right: 27px;
       color: #242932;
       opacity: 0.8; }
 
@@ -392,6 +392,8 @@ nav {
     .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .country1 {
       padding-right: 20px;
       padding-left: 7%; }
+    .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .penalty {
+      right: 15px; }
   .schedule-container .schedule-scroll-container {
     height: 97vh; }
   .background img {
@@ -424,6 +426,8 @@ nav {
       top: 1px; }
     .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .time {
       font-size: 0.8rem; }
+    .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .penalty {
+      right: 7px; }
   .schedule-wrapper {
     padding-left: 10px; }
     .schedule-wrapper .schedule-date {
