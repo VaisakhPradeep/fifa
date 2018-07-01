@@ -705,6 +705,15 @@ $(".match48").click(function(){
 	window.open("https://youtu.be/nc9zirKrT0Q");
 });
 
+$(".match49").addClass("score");
+$(".match49").click(function(){
+	window.open("https://www.youtube.com/watch?v=6C6oOcDFmLY");
+})
+
+$(".match50").addClass("score");
+$(".match50").click(function(){
+	window.open("https://www.youtube.com/watch?v=auqyXFLZ_zw");
+})
 
 
 
