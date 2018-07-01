@@ -694,7 +694,6 @@ $(".match46").click(function(){
 });
 
 
-
 $(".match47").addClass("score");
 $(".match47").click(function(){
 	window.open("https://youtu.be/N5F1hqWW_5w");
@@ -715,7 +714,10 @@ $(".match50").click(function(){
 	window.open("https://www.youtube.com/watch?v=auqyXFLZ_zw");
 })
 
-
+$(".match51").addClass("score");
+$(".match51").click(function(){
+	window.open("https://www.youtube.com/watch?v=gHPke43iqNg");
+})
 
 
 

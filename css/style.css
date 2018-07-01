@@ -260,7 +260,16 @@ nav {
     .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .time {
       text-align: right;
       width: 20%;
-      font-size: 0.9rem; }
+      font-size: 0.9rem;
+      position: relative; }
+    .schedule-wrapper .schedule-card-wrapper .schedule-card .match-container .penalty {
+      position: absolute;
+      right: 0px;
+      bottom: 2px;
+      font-size: 0.65rem;
+      right: 5px;
+      color: #242932;
+      opacity: 0.8; }
 
 /* -------------------- Teams ------------------------  */
 .team-list-card {
