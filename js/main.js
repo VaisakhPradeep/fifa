@@ -719,6 +719,10 @@ $(".match51").click(function(){
 	window.open("https://www.youtube.com/watch?v=gHPke43iqNg");
 })
 
+$(".match52").addClass("score");
+$(".match52").click(function(){
+	window.open("https://www.youtube.com/watch?v=kYIf8I1dvdo");
+})
 
 
 
