@@ -721,9 +721,14 @@ $(".match51").click(function(){
 
 $(".match52").addClass("score");
 $(".match52").click(function(){
+<<<<<<< HEAD
 	window.open("https://www.youtube.com/watch?v=kYIf8I1dvdo");
 })
 
+=======
+	window.open("https://www.youtube.com/watch?v=5_iIW2DZ8nc");
+})
+>>>>>>> 34524833f73b3416f04366062ca19bf1f8588176
 
 
 
