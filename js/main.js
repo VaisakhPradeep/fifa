@@ -126,7 +126,7 @@ function getTimeZone(hours, mins) {
 var today = new Date();
 var localDate = today.getDate();
 
-for(let i=1; i<=56; i++){
+for(let i=1; i<=60; i++){
 	var utc = $(".utc"+i).text();					//get the utc time string from html
 	var utcHrs = utc.charAt(0)+utc.charAt(1);		//assign first and second characters as utc hrs
 	var utcMins = utc.charAt(3) + utc.charAt(4);	//assign minutes characters
@@ -211,7 +211,7 @@ for(let i=1; i<=56; i++){
 
 }
 
-for(let i=1; i<=56; i++){
+for(let i=1; i<=60; i++){
 	var date = $(".date"+i).text();
 	var month = date.substr(0,4)
 	if(month==="July"){
