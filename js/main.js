@@ -729,6 +729,11 @@ $(".match53").click(function(){
 	window.open("https://www.youtube.com/watch?v=kYIf8I1dvdo");
 })
 
+$(".match54").addClass("score");
+$(".match54").click(function(){
+	window.open("https://youtu.be/fJeJuc27ggE");
+})
+
 
 
 });
