@@ -482,7 +482,7 @@ function fetchData2(){
 		}
 
 	}
-	$(".date"+lastNumber).parent().parent().addClass("last-match");
+	//$(".date"+lastNumber).parent().parent().addClass("last-match");
 	
 
 
