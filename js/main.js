@@ -748,6 +748,18 @@ $(".match56").click(function(){
 	window.open("https://www.youtube.com/watch?v=RbmaLT320hw");
 })
 
+$(".match57").addClass("score");
+$(".match57").click(function(){
+	window.open("https://www.youtube.com/watch?v=_YK4o-Gbppg");
+})
+
+$(".match58").addClass("score");
+$(".match58").click(function(){
+	window.open("https://www.youtube.com/watch?v=t8IK0ZqfxNI");
+})
+
+
+
 
 
 
