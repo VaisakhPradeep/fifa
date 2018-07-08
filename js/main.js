@@ -126,7 +126,7 @@ function getTimeZone(hours, mins) {
 var today = new Date();
 var localDate = today.getDate();
 
-for(let i=1; i<=60; i++){
+for(let i=1; i<=62; i++){
 	var utc = $(".utc"+i).text();					//get the utc time string from html
 	var utcHrs = utc.charAt(0)+utc.charAt(1);		//assign first and second characters as utc hrs
 	var utcMins = utc.charAt(3) + utc.charAt(4);	//assign minutes characters
@@ -211,7 +211,7 @@ for(let i=1; i<=60; i++){
 
 }
 
-for(let i=1; i<=60; i++){
+for(let i=1; i<=62; i++){
 	var date = $(".date"+i).text();
 	var month = date.substr(0,4)
 	if(month==="July"){
@@ -450,7 +450,10 @@ var fifaId = [
 	"300331543",
 	"300331538",
 	"300331541",
-	"300331504"
+	"300331504",
+	"300331531",
+	"300331522"
+
 ];
 
 var resultObj = [];
@@ -486,7 +489,7 @@ function fetchData2(){
 		}
 
 	}
-	//$(".date"+lastNumber).parent().parent().addClass("last-match");
+	$(".date"+lastNumber).parent().parent().addClass("last-match");
 	
 
 
