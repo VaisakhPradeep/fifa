@@ -758,6 +758,16 @@ $(".match58").click(function(){
 	window.open("https://www.youtube.com/watch?v=t8IK0ZqfxNI");
 })
 
+$(".match59").addClass("score");
+$(".match59").click(function(){
+	window.open("https://www.youtube.com/watch?v=Wr7-HtVlAdI");
+})
+
+$(".match60").addClass("score");
+$(".match60").click(function(){
+	window.open("https://www.youtube.com/watch?v=wjU8j2bj3RY");
+})
+
 
 
 
