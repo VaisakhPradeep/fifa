@@ -771,7 +771,10 @@ $(".match60").click(function(){
 	window.open("https://www.youtube.com/watch?v=wjU8j2bj3RY");
 })
 
-
+$(".match60").addClass("score");
+$(".match60").click(function(){
+	window.open("https://www.youtube.com/watch?v=ntQsMSuEbyg");
+})
 
 
 
