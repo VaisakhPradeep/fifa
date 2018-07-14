@@ -201,7 +201,7 @@ for(let i=1; i<=64; i++){
 
 	//today banner placement
 
-	if(Number(newDate) === localDate){
+	if(Number(newDate) === localDate && month === "July"){
 		$(".date"+i).parent().next().children().attr('id','today');
 	}
 	else{
