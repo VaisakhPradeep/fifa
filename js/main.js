@@ -783,6 +783,18 @@ $(".match62").click(function(){
 	window.open("https://www.youtube.com/watch?v=gi_2GELMwfY");
 })
 
+$(".match63").addClass("score");
+$(".match63").click(function(){
+	window.open("https://www.youtube.com/watch?v=K4juJWyexYM");
+})
+
+$(".match64").addClass("score");
+$(".match64").click(function(){
+	window.open("https://www.youtube.com/watch?v=FrxhllQbqBU");
+})
+
+
+
 
 
 
